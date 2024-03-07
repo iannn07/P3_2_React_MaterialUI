@@ -14,16 +14,19 @@ const Layout = ({ children }: LayoutProps) => {
         display: "flex",
         flexDirection: {
           xs: "column",
-          sm: "row",
+          lg: "row",
         },
         color: "#f1f1f1",
         padding: 3,
         gap: 3,
-        overflowY: "hidden",
+        overflowY: "inherit",
       }}
     >
-      <Sidebar />
-      <Box sx={{ width: "100%", overflowY: "scroll" }}> {children} </Box>
+      <Sidebar></Sidebar>
+      <Box sx={{ width: "100%", overflowY: "inherit" }}>
+        {children}
+        {""}
+      </Box>
     </Box>
   );
 };

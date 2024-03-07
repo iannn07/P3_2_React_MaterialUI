@@ -37,7 +37,7 @@ const Sidebar = () => {
       sx={{
         backgroundColor: "#222222",
         padding: 2,
-        borderRadius: 5,
+        borderRadius: 2,
         display: "flex",
         flexDirection: {
           xs: "row",
@@ -46,6 +46,7 @@ const Sidebar = () => {
         alignItems: "center",
         justifyContent: "space-between",
         width: {
+          xs: "100%",
           sm: "100%",
           lg: 200,
         },
@@ -60,10 +61,6 @@ const Sidebar = () => {
           },
           gap: 5,
           alignItems: {
-            xs: "center",
-            lg: "start",
-          },
-          justifyContent: {
             xs: "center",
             lg: "start",
           },
