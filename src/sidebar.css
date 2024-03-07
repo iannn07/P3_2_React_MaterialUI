@@ -1,0 +1,10 @@
+.active-icon {
+  width: 18px;
+  filter: invert(58%) sepia(14%) saturate(3166%) hue-rotate(215deg)
+    brightness(91%) contrast(87%);
+}
+
+.inactive-icon {
+  width: 18px;
+  filter: invert(84%);
+}
