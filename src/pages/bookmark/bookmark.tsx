@@ -8,19 +8,16 @@ import {
   Typography,
 } from "@mui/material";
 import SearchIcon from "../../assets/icons/icon-search.svg";
-import MovieTrendList from "../../components/movie-list/movieTrendList";
 import MovieList from "../../components/movie-list/movieList";
 import { MovieDataType } from "../../assets/data";
 import { MovieContext } from "../../context/movie-context";
 
-const Home = () => {
+const Bookmark = () => {
   const [search, setSearch] = useState("");
   const [searchList, setSearchList] = useState<MovieDataType[]>([]);
   const { state } = useContext(MovieContext);
   const { movies } = state;
-
-  const trendingList = movies.filter((movie) => movie.isTrending === true);
-  const recommendList = movies.filter((movie) => movie.isTrending !== true);
+  const bookmark = movies.filter((movie) => movie.isBookmarked === true);
 
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value);
@@ -68,24 +65,13 @@ const Home = () => {
               <Typography
                 variant="h5"
                 component="h1"
-                my={6}
-                fontWeight={"bold"}
-              >
-                Trending
-              </Typography>
-              <MovieTrendList trendingList={trendingList} />
-            </Box>
-            <Box width={"100%"}>
-              <Typography
-                variant="h5"
-                component="h1"
                 my={3}
                 mt={5}
                 fontWeight={"bold"}
               >
-                For You
+                Bookmarks
               </Typography>
-              <MovieList recommendList={recommendList} />
+              <MovieList recommendList={search === "" ? bookmark : searchList} />
             </Box>
           </Box>
         ) : (
@@ -93,12 +79,12 @@ const Home = () => {
             <Typography variant="h5" component="h1" my={6} fontWeight={"bold"}>
               Found {searchList.length} results for "{search}" {""}
             </Typography>
-            <MovieList recommendList={searchList}/>
+            <MovieList recommendList={searchList} />
           </Box>
         )}
       </Box>
     </Layout>
-  );
+  );;
 };
 
-export default Home;
+export default Bookmark;

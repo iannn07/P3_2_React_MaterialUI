@@ -14,7 +14,7 @@ const MovieTrendList = ({ trendingList }: MovieTrendListProps) => {
       sx={{
         display: "flex",
         gap: 2,
-        overflowX: "scroll",
+        overflowX: "auto",
       }}
     >
       {trendingList.map((movie) => (

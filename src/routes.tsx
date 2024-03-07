@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Movies from "./pages/movies/movies";
 import Home from "./pages/home/home";
 import Error from "./pages/error/error";
-import Series from "./pages/series";
-import Bookmark from "./pages/bookmark";
+import Series from "./pages/series/series";
+import Bookmark from "./pages/bookmark/bookmark";
 
 export const router = createBrowserRouter([
   {

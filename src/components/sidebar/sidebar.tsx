@@ -72,13 +72,13 @@ const Sidebar = () => {
       >
         <Hidden smDown>
           <Typography
-            variant="h3"
+            variant="h5"
             component="h1"
             my={2}
             fontWeight={"bold"}
-            fontSize={20}
+            fontSize={18}
           >
-            Squidward Movie App
+            Squidward App
           </Typography>
         </Hidden>
         <Box

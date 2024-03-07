@@ -20,6 +20,7 @@ const initialMovieState: MovieState = {
   movies: MovieList,
 };
 
+// Redux
 const MovieReducer = (state: MovieState, action: MovieAction): MovieState => {
   switch (action.type) {
     case "TOGGLE BOOKMARK":
