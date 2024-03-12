@@ -34,10 +34,10 @@ const MovieCard = ({ movie }: MovieCardProps) => {
         sx={{
           padding: 0,
           position: "relative",
-          borderRadius: "8px",
-          backgroundColor: "#222222",
-          alignContent: "center",
-          alignItems: "center",
+          // borderRadius: "8px",
+          // backgroundColor: "#222222",
+          // alignContent: "center",
+          // alignItems: "center",
         }}
       >
         <Grid container spacing={1}>
@@ -46,8 +46,8 @@ const MovieCard = ({ movie }: MovieCardProps) => {
               src={movie.thumbnail.regular.large}
               alt=""
               style={{
-                width: "auto",
-                height: "200px",
+                width: "400px",
+                height: "auto",
                 borderRadius: "8px",
               }}
             />
